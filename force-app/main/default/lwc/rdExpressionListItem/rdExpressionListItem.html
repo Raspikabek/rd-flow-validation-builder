@@ -1,0 +1,14 @@
+<template>
+  <lightning-layout>
+    <lightning-layout-item size="10"
+      >{expression.resource} :: {expression.condition} ::
+      {expression.value}</lightning-layout-item
+    >
+    <lightning-layout-item size="2"
+      ><lightning-button-icon
+        icon-name="utility:delete"
+        onclick={handleClick}
+      ></lightning-button-icon
+    ></lightning-layout-item>
+  </lightning-layout>
+</template>

@@ -1,0 +1,14 @@
+<template>
+  <template for:each={expressions} for:item="expression">
+    <c-rd-expression-list-item
+      key={expression.name}
+      expression={expression}
+      ondelete={handleDelete}
+    ></c-rd-expression-list-item>
+  </template>
+  <lightning-button
+    icon-name="utility:add"
+    label="Add Condition"
+    onclick={handleClick}
+  ></lightning-button>
+</template>
