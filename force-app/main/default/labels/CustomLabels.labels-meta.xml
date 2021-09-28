@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>RD_FlowValidationBuilder_Condition</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Condition</shortDescription>
+        <value>Condition</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_Done</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RD Flow Validation Builder - Done</shortDescription>
+        <value>Done</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_Resource</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Resource</shortDescription>
+        <value>Resource</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_Value</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RD Flow Validation Builder - Value</shortDescription>
+        <value>Value</value>
+    </labels>
+</CustomLabels>
