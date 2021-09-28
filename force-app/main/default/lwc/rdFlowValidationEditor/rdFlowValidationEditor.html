@@ -1,0 +1,67 @@
+<template>
+  <ul class="slds-accordion">
+    <li class="slds-accordion__list-item">
+      <section class="slds-accordion__section slds-is-open">
+        <div class="slds-accordion__summary">
+          <h2 class="slds-accordion__summary-heading">
+            <lightning-button-stateful
+              label-when-off="Validate Input"
+              label-when-on="Validate Input"
+              label-when-hover="Validate Input"
+              icon-name-when-off="utility:chevronright"
+              icon-name-when-on="utility:chevrondown"
+              icon-name-when-hover="utility:chevrondown"
+              selected={isSelected}
+              onclick={handleHeaderClick}
+              variant="text"
+            >
+            </lightning-button-stateful>
+          </h2>
+        </div>
+        <div
+          if:true={isSelected}
+          class="slds-accordion__content"
+          id="referenceId-45"
+        >
+          <lightning-combobox
+            name="validateInput"
+            label="Validate Input"
+            value={validateInputValue}
+            options={validateInputOptions}
+            onchange={handleValidateInputChange}
+          ></lightning-combobox>
+
+          <lightning-layout
+            if:true={renderValidationBuilder}
+            multiple-rows="true"
+          >
+            <lightning-layout-item size="12">
+              <lightning-input
+                if:true={renderCustomLogic}
+                type="text"
+                label="Condition Logic"
+                field-level-help={labels.ConditionLogic.HelpText}
+              ></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+              Expressions List component here -- PLACEHOLDER OF
+              ExpressionBuilder popup content:
+              <c-rd-expression-builder
+                builder-context={builderContext}
+                onsubmit={handleSubmit}
+              ></c-rd-expression-builder>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+              <lightning-input-rich-text
+                label="Error message"
+                label-visible="true"
+                value={myVal}
+              >
+              </lightning-input-rich-text>
+            </lightning-layout-item>
+          </lightning-layout>
+        </div>
+      </section>
+    </li>
+  </ul>
+</template>

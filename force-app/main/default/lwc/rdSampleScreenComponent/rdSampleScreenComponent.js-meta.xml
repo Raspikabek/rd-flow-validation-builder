@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <masterLabel>RD Sample Screen Component</masterLabel>
+    <description
+  >Mock component to test the usage of the flow-validation-editor component</description>
+    <targetConfigs>
+        <targetConfig
+      targets="lightning__FlowScreen"
+      configurationEditor="c-rd-flow-validation-editor"
+    >
+            <property name="value" type="Integer" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

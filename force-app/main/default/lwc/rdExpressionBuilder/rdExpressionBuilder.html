@@ -1,0 +1,36 @@
+<template>
+  <lightning-layout multiple-rows="true" horizontal-align="end">
+    <lightning-layout-item size="12">
+      <!-- TODO: Replace this with custom search component (reuse input type search) -->
+      <lightning-combobox
+        options={builderContextOptions}
+        value={resourceInputValue}
+        label={labels.resource}
+        onchange={handleResourceChange}
+      ></lightning-combobox>
+    </lightning-layout-item>
+    <lightning-layout-item size="12">
+      <lightning-combobox
+        options={conditionOptions}
+        value={conditionInputValue}
+        label={labels.condition}
+        onchange={handleConditionChange}
+      ></lightning-combobox>
+    </lightning-layout-item>
+    <lightning-layout-item size="12">
+      <!-- TODO: Replace this with custom search component (reuse input type search) -->
+      <lightning-combobox
+        options={builderContextOptions}
+        value={valueInputValue}
+        label={labels.value}
+        onchange={handleValueChange}
+      ></lightning-combobox>
+    </lightning-layout-item>
+    <lightning-layout-item class="footer">
+      <lightning-button
+        label={labels.button}
+        onclick={handleButtonClick}
+      ></lightning-button>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>
