@@ -14,6 +14,7 @@
     "test:unit:coverage": "sfdx-lwc-jest --coverage",
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+    "sfdx:setup:project": "sfdx force:org:create --setalias rd-flow-validation-builder --definitionfile config/project/scratch-def.json --setdefaultusername --wait 120 && sfdx force:source:push",
     "postinstall": "husky install",
     "precommit": "lint-staged"
   },
