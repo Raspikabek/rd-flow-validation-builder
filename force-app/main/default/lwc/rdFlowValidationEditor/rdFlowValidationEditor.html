@@ -1,13 +1,13 @@
 <template>
   <ul class="slds-accordion">
     <li class="slds-accordion__list-item">
-      <section class="slds-accordion__section slds-is-open">
+      <section class="slds-is-open">
         <div class="slds-accordion__summary">
           <h2 class="slds-accordion__summary-heading">
             <lightning-button-stateful
-              label-when-off="Validate Input"
-              label-when-on="Validate Input"
-              label-when-hover="Validate Input"
+              label-when-off={labels.validateInput}
+              label-when-on={labels.validateInput}
+              label-when-hover={labels.validateInput}
               icon-name-when-off="utility:chevronright"
               icon-name-when-on="utility:chevrondown"
               icon-name-when-hover="utility:chevrondown"
@@ -25,7 +25,7 @@
         >
           <lightning-combobox
             name="validateInput"
-            label="Validate Input"
+            label={labels.validateInput}
             value={validateInputValue}
             options={validateInputOptions}
             onchange={handleValidateInputChange}
@@ -39,8 +39,8 @@
               <lightning-input
                 if:true={renderCustomLogic}
                 type="text"
-                label="Condition Logic"
-                field-level-help={labels.ConditionLogic.HelpText}
+                label={labels.customLogicInput}
+                field-level-help={labels.customLogicInputHelpText}
               ></lightning-input>
             </lightning-layout-item>
             <lightning-layout-item size="12">
@@ -53,7 +53,7 @@
             </lightning-layout-item>
             <lightning-layout-item size="12">
               <lightning-input-rich-text
-                label="Error message"
+                label={labels.errorMessageInput}
                 label-visible="true"
                 value={myVal}
               >

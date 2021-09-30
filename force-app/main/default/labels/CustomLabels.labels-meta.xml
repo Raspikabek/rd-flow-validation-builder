@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>RD_FlowValidationBuilder_AddCondition</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Add Condition</shortDescription>
+        <value>Add Condition</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_AllConditionsAreMet</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - All Conditions Are Met</shortDescription>
+        <value>All Conditions Are Met (AND)</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_AnyConditionIsMet</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Any Condition Is Met</shortDescription>
+        <value>Any Condition Is Met (OR)</value>
+    </labels>
+    <labels>
         <fullName>RD_FlowValidationBuilder_Condition</fullName>
         <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
         <language>en_US</language>
@@ -8,6 +35,34 @@
         <shortDescription
     >RD Flow Validation Builder - Condition</shortDescription>
         <value>Condition</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_ConditionLogic</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Condition Logic</shortDescription>
+        <value>Condition Logic</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_ConditionLogicHelpText</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Condition Logic Help Text</shortDescription>
+        <value
+    >Use parentheses, AND, OR, and NOT to customize the logic. For example, if you enter &quot;(1 AND 2 AND 3) OR 4&quot;, the flow evaluates whether the first three conditions are true or only the fourth condition is true</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_CustomConditionLogicIsMet</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Custom Condition Logic Is Met</shortDescription>
+        <value>Custom Condition Logic Is Met</value>
     </labels>
     <labels>
         <fullName>RD_FlowValidationBuilder_Done</fullName>
@@ -18,6 +73,24 @@
         <value>Done</value>
     </labels>
     <labels>
+        <fullName>RD_FlowValidationBuilder_ErrorMessage</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Error Message</shortDescription>
+        <value>Error Message</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_NoValidations</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - No Validations</shortDescription>
+        <value>No Validations</value>
+    </labels>
+    <labels>
         <fullName>RD_FlowValidationBuilder_Resource</fullName>
         <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
         <language>en_US</language>
@@ -25,6 +98,15 @@
         <shortDescription
     >RD Flow Validation Builder - Resource</shortDescription>
         <value>Resource</value>
+    </labels>
+    <labels>
+        <fullName>RD_FlowValidationBuilder_ValidateInput</fullName>
+        <categories>RaspisDojo FlowValidationBuilder LWC Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription
+    >RD Flow Validation Builder - Validate Input</shortDescription>
+        <value>Validate Input</value>
     </labels>
     <labels>
         <fullName>RD_FlowValidationBuilder_Value</fullName>

@@ -1,16 +1,30 @@
 import { LightningElement, api } from "lwc";
+import noValidationsLabel from "@salesforce/label/c.RD_FlowValidationBuilder_NoValidations";
+import allConditionsAreMetLabel from "@salesforce/label/c.RD_FlowValidationBuilder_AllConditionsAreMet";
+import anyConditionIsMetLabel from "@salesforce/label/c.RD_FlowValidationBuilder_AnyConditionIsMet";
+import customConditionLogicLabel from "@salesforce/label/c.RD_FlowValidationBuilder_CustomConditionLogicIsMet";
+import validateInputLabel from "@salesforce/label/c.RD_FlowValidationBuilder_ValidateInput";
+import conditionLogicLabel from "@salesforce/label/c.RD_FlowValidationBuilder_ConditionLogic";
+import conditionLogicHelpTextLabel from "@salesforce/label/c.RD_FlowValidationBuilder_ConditionLogicHelpText";
+import errorMessageLabel from "@salesforce/label/c.RD_FlowValidationBuilder_ErrorMessage";
 
 export default class RdFlowValidationEditor extends LightningElement {
+  labels = {
+    validateInput: validateInputLabel,
+    customLogicInput: conditionLogicLabel,
+    customLogicInputHelpText: conditionLogicHelpTextLabel,
+    errorMessageInput: errorMessageLabel
+  };
   // TODO: set a validate() method
   _inputVariables = [];
   _expressions = [];
 
   validateInputValue = "NO";
   validateInputOptions = [
-    { label: "No Validations", value: "NO" },
-    { label: "All Conditions Are Met (AND)", value: "AND" },
-    { label: "Any Condition Is Met (OR)", value: "OR" },
-    { label: "Custom Condition Logic is Met", value: "CUSTOM" }
+    { label: noValidationsLabel, value: "NO" },
+    { label: allConditionsAreMetLabel, value: "AND" },
+    { label: anyConditionIsMetLabel, value: "OR" },
+    { label: customConditionLogicLabel, value: "CUSTOM" }
   ];
 
   operatorValue = "equal";
@@ -22,13 +36,6 @@ export default class RdFlowValidationEditor extends LightningElement {
     { label: "Contains", value: "contains" },
     { label: "Is Null", value: "isNull" }
   ];
-
-  labels = {
-    ConditionLogic: {
-      HelpText:
-        'Use parentheses, AND, OR, and NOT to customize the logic. For example, if you enter "(1 AND 2 AND 3) OR 4", the flow evaluates wheter the first three conditions are true or only the fourth condition is true'
-    }
-  };
 
   isSelected = false;
 

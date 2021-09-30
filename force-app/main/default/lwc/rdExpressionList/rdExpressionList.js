@@ -1,6 +1,8 @@
 import { LightningElement } from "lwc";
+import addConditionLabel from "@salesforce/label/c.RD_FlowValidationBuilder_AddCondition";
 
 export default class RdExpressionList extends LightningElement {
+  labels = { button: addConditionLabel };
   expressions = [
     { resource: "placeholder", condition: "equals", value: "test" },
     { resource: "placeholder", condition: "equals", value: "test" }
