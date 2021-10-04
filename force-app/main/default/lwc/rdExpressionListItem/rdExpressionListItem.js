@@ -4,9 +4,13 @@ export default class RdExpressionListItem extends LightningElement {
   @api
   expression;
 
-  handleClick() {
+  handleDeleteButton() {
     this.dispatchEvent(
       new CustomEvent("delete", { detail: this.expression.name })
     );
+  }
+
+  handleTileClick() {
+    this.dispatchEvent(new CustomEvent("select", { detail: this.expression }));
   }
 }
