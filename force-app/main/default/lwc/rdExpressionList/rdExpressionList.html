@@ -3,7 +3,8 @@
     <c-rd-expression-list-item
       key={expression.name}
       expression={expression}
-      ondelete={handleDelete}
+      onselect={handleItemSelect}
+      ondelete={handleItemDelete}
     ></c-rd-expression-list-item>
   </template>
   <lightning-button
@@ -11,4 +12,17 @@
     label={labels.button}
     onclick={handleClick}
   ></lightning-button>
+  <div
+    if:true={renderPopover}
+    class="popover"
+    role="tooltip"
+    data-id="tooltip-left"
+  >
+    <c-rd-popover nubbin="slds-nubbin_right" onclose={handlePopoverClose}>
+      <c-rd-expression-builder
+        builder-context={builderContext}
+        onsubmit={handleSubmit}
+      ></c-rd-expression-builder>
+    </c-rd-popover>
+  </div>
 </template>

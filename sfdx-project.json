@@ -1,12 +1,15 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app",
+      "path": "force-app/main",
       "default": true
+    },
+    {
+      "path": "force-app/sample"
     }
   ],
   "name": "rd-flow-validation-builder",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "52.0"
+  "sourceApiVersion": "56.0"
 }

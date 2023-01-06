@@ -75,6 +75,25 @@ export default class RdFlowValidationEditor extends LightningElement {
 
   handleValidateInputChange(event) {
     this.validateInputValue = event.detail.value;
+
+    /** TEST to store the value in the metadata flow -- REMOVE LATER */
+    if (event && event.detail) {
+      const newValue = 1;
+      const valueChangedEvent = new CustomEvent(
+        "configuration_editor_input_value_changed",
+        {
+          bubbles: true,
+          cancelable: false,
+          composed: true,
+          detail: {
+            name: "value",
+            newValue,
+            newValueDataType: "Number"
+          }
+        }
+      );
+      this.dispatchEvent(valueChangedEvent);
+    }
   }
 
   handleSubmit(event) {

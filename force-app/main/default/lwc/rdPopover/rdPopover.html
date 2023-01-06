@@ -1,0 +1,44 @@
+<template>
+  <section
+    aria-labelledby="panel-heading-id"
+    class={nubbinClass}
+    style="background: #f3f2f2"
+    role="dialog"
+  >
+    <lightning-button-icon
+      class="slds-float_right slds-popover__close"
+      title="Close dialog"
+      icon-name="utility:close"
+      size="medium"
+      variant="bare"
+      onclick={handleCloseButton}
+    ></lightning-button-icon>
+    <div class="slds-popover__header">
+      <header
+        if:true={renderHeader}
+        class="slds-media slds-media_center slds-var-m-bottom_small"
+      >
+        <template if:true={iconName}>
+          <lightning-icon
+            icon-name={iconName}
+            class="slds-var-m-right_small"
+          ></lightning-icon>
+        </template>
+        <div if:true={title} class="slds-media__body">
+          <slot name="title">
+            <h1
+              class="slds-text-heading_medium slds-hyphenate slds-truncate"
+              id="panel-heading-id"
+              style="font-weight: 400"
+            >
+              <span>{title}</span>
+            </h1>
+          </slot>
+        </div>
+      </header>
+      <footer class="slds-grid slds-wrap slds-grid_pull-padded">
+        <slot> </slot>
+      </footer>
+    </div>
+  </section>
+</template>
