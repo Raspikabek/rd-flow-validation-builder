@@ -1,11 +1,8 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app/main",
+      "path": "force-app",
       "default": true
-    },
-    {
-      "path": "force-app/sample"
     }
   ],
   "name": "rd-flow-validation-builder",
