@@ -1,0 +1,3 @@
+.text-container {
+    color: var(--lwc-colorTextBrand, green);
+}

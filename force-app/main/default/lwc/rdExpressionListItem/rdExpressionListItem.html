@@ -1,14 +1,25 @@
 <template>
-  <lightning-layout>
-    <lightning-layout-item size="10"
+  <lightning-layout class="slds-box slds-box_xx-small slds-m-vertical_small slds-m-left_x-large slds-m-left--x-large">
+    <lightning-layout-item size="11"
       ><div onclick={handleTileClick}>
-        {expression.resource} :: {expression.condition} :: {expression.value}
+        <lightning-layout multiple-rows="true" class="text-container">
+          <lightning-layout-item size="12"
+            ><span>{expression.resource}</span></lightning-layout-item
+          >
+          <lightning-layout-item size="12"
+            ><span>{expression.condition}</span></lightning-layout-item
+          >
+          <lightning-layout-item size="12"
+            ><span>{expression.value}</span></lightning-layout-item
+          >
+        </lightning-layout>
       </div></lightning-layout-item
     >
-    <lightning-layout-item size="2"
+    <lightning-layout-item size="1"
       ><lightning-button-icon
         icon-name="utility:delete"
         onclick={handleDeleteButton}
+        variant="bare"
       ></lightning-button-icon
     ></lightning-layout-item>
   </lightning-layout>
