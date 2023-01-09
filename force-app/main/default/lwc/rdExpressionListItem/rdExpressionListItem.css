@@ -1,3 +1,7 @@
 .text-container {
-    color: var(--lwc-colorTextBrand, green);
+  color: var(--lwc-colorTextBrand, #006dcc);
+}
+
+.text-bold {
+  font-weight: bold;
 }

@@ -1,5 +1,7 @@
 <template>
-  <lightning-layout class="slds-box slds-box_xx-small slds-m-vertical_small slds-m-left_x-large slds-m-left--x-large">
+  <lightning-layout
+    class="slds-box slds-box_xx-small slds-m-vertical_small slds-m-left_x-large slds-m-left--x-large"
+  >
     <lightning-layout-item size="11"
       ><div onclick={handleTileClick}>
         <lightning-layout multiple-rows="true" class="text-container">
@@ -7,7 +9,9 @@
             ><span>{expression.resource}</span></lightning-layout-item
           >
           <lightning-layout-item size="12"
-            ><span>{expression.condition}</span></lightning-layout-item
+            ><span class="text-bold"
+              >{expression.condition}</span
+            ></lightning-layout-item
           >
           <lightning-layout-item size="12"
             ><span>{expression.value}</span></lightning-layout-item

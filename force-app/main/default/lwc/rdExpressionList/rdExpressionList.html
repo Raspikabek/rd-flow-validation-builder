@@ -1,7 +1,8 @@
 <template>
-  <template for:each={expressions} for:item="expression">
+  <template for:each={expressions} for:item="expression" for:index="index">
     <c-rd-expression-list-item
       key={expression.name}
+      row-index={index}
       expression={expression}
       onselect={handleItemSelect}
       ondelete={handleItemDelete}
