@@ -4,16 +4,18 @@ import addConditionLabel from "@salesforce/label/c.RD_FlowValidationBuilder_AddC
 export default class RdExpressionList extends LightningElement {
   @api builderContext;
 
+  @api showRowNumbers = false;
+
   labels = { button: addConditionLabel };
   expressions = [
     {
-      name: "test1",
+      order: 1,
       resource: "placeholder",
       condition: "equals",
       value: "test"
     },
     {
-      name: "test2",
+      order: 2,
       resource: "placeholder",
       condition: "equals",
       value: "test"
@@ -42,5 +44,9 @@ export default class RdExpressionList extends LightningElement {
   handleSubmit(event) {
     // TODO: handle Expression Builder popup submission, add item to list and store info in flow
     console.log(event.detail);
+  }
+
+  get showRowNumber() {
+    return true;
   }
 }

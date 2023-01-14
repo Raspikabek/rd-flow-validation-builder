@@ -1,30 +1,39 @@
 <template>
-  <lightning-layout
-    class="slds-box slds-box_xx-small slds-m-vertical_small slds-m-left_x-large slds-m-left--x-large"
-  >
-    <lightning-layout-item size="11"
-      ><div onclick={handleTileClick}>
-        <lightning-layout multiple-rows="true" class="text-container">
-          <lightning-layout-item size="12"
-            ><span>{expression.resource}</span></lightning-layout-item
-          >
-          <lightning-layout-item size="12"
-            ><span class="text-bold"
-              >{expression.condition}</span
-            ></lightning-layout-item
-          >
-          <lightning-layout-item size="12"
-            ><span>{expression.value}</span></lightning-layout-item
-          >
-        </lightning-layout>
-      </div></lightning-layout-item
-    >
-    <lightning-layout-item size="1"
-      ><lightning-button-icon
-        icon-name="utility:delete"
-        onclick={handleDeleteButton}
-        variant="bare"
-      ></lightning-button-icon
-    ></lightning-layout-item>
+  <lightning-layout vertical-align="center">
+    <lightning-layout-item size="1">
+      <template if:true={showRowNumber}>
+        <span class="text-bold">{expression.order}</span>
+      </template>
+    </lightning-layout-item>
+    <lightning-layout-item size="11">
+      <lightning-layout
+        class="slds-box slds-box_xx-small slds-m-vertical_small"
+      >
+        <lightning-layout-item size="11"
+          ><div onclick={handleTileClick}>
+            <lightning-layout multiple-rows="true" class="text-container">
+              <lightning-layout-item size="12"
+                ><span>{expression.resource}</span></lightning-layout-item
+              >
+              <lightning-layout-item size="12"
+                ><span class="text-bold"
+                  >{expression.condition}</span
+                ></lightning-layout-item
+              >
+              <lightning-layout-item size="12"
+                ><span>{expression.value}</span></lightning-layout-item
+              >
+            </lightning-layout>
+          </div></lightning-layout-item
+        >
+        <lightning-layout-item size="1"
+          ><lightning-button-icon
+            icon-name="utility:delete"
+            onclick={handleDeleteButton}
+            variant="container"
+          ></lightning-button-icon
+        ></lightning-layout-item>
+      </lightning-layout>
+    </lightning-layout-item>
   </lightning-layout>
 </template>

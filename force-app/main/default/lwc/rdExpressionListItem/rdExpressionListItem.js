@@ -5,11 +5,7 @@ export default class RdExpressionListItem extends LightningElement {
   expression;
 
   @api
-  rowIndex;
-
-  get rowNumber() {
-    return this.rowIndex + 1;
-  }
+  showRowNumber = false;
 
   handleDeleteButton() {
     this.dispatchEvent(
